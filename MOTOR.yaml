@@ -1,0 +1,34 @@
+
+DATA:
+
+    task : MOTOR
+    task_dict: {'EMOTION': 176, 'GAMBLING': 253, 'LANGUAGE': 316, 'MOTOR': 284, 'RELATIONAL': 232, 'SOCIAL': 274, 'WM': 405}   
+
+    fname: /home/lin/Data/HCP_900_Grayordinate/Autoencoder/Group/MOTOR_Random_Subj_150_Sample_7500000_Whole_Brain_Smooth_3mm.mat
+    attrname: ['whole_brain_train_samples', 'whole_brain_test_samples','sample_group']
+
+
+TRAIN:
+    
+    epochs : 50
+    batch_size : 128
+    print_freq: 100
+
+TEST:
+
+    test_data_dir: /home/lin/Data/HCP_900_Grayordinate/Autoencoder/Individual/150/MOTOR_3
+    test_attrname: ['whole_brain']
+    result_dir: /home/lin/Results/Autoencoder/MOTOR/
+
+MODEL:
+
+    kernel_size: [21, 9, 9, 9]
+    kernel_num: [32, 64, 128, 256]
+    latent_size: [16, 16, 16, 16]
+
+    model_dir: models/MOTOR/
+
+
+
+
+
